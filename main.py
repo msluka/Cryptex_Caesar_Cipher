@@ -28,6 +28,18 @@ def encrypt(original_text, shift_amount):
             cipher_text += alphabet[new_position]
     return cipher_text
 
+def decrypt(original_text, shift_amount):
+    cipher_text = ""
+    for letter in original_text:
+        if letter not in alphabet:
+            cipher_text += letter
+        else:
+            position = alphabet.index(letter)
+            new_position = position - shift_amount
+            new_position %= len(alphabet)
+            cipher_text += alphabet[new_position]
+    return cipher_text
+
 
 
 
