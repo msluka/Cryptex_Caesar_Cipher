@@ -46,6 +46,22 @@ def cryptex_transform_data(original_txt, shift_amount, encode_or_decode):
     else:
         print(decrypt(original_text=original_txt, shift_amount=shift_amount))
 
+continue_program = True
+
+while continue_program:
+
+    direction = check_command()
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+
+    cryptex_transform_data(text, shift, direction)
+
+    restart = input("Would you like to continue? Please type 'Yes' or any other key to exit.\n")
+    if restart.lower() == "yes":
+        continue
+    else:
+        continue_program = False
+
 
 
 
