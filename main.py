@@ -40,6 +40,12 @@ def decrypt(original_text, shift_amount):
             cipher_text += alphabet[new_position]
     return cipher_text
 
+def cryptex_transform_data(original_txt, shift_amount, encode_or_decode):
+    if encode_or_decode.lower() == "encode":
+        print(encrypt(original_text=original_txt, shift_amount=shift_amount))
+    else:
+        print(decrypt(original_text=original_txt, shift_amount=shift_amount))
+
 
 
 
